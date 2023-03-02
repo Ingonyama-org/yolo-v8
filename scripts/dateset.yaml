@@ -1,0 +1,16 @@
+names:
+  0: body
+  1: nose
+  2: nothing
+  3: profile
+  4: left_ear
+  5: left_eye
+  6: right_eye
+  7: right_ear
+  8: leftside_whiskers
+  9: rightside_whiskers
+nc: 10
+path: ../d_data
+test: test/images
+train: train/images
+val: val/images

@@ -1,0 +1,10 @@
+body
+nose
+nothing
+profile
+left_ear
+left_eye
+right_eye
+right_ear
+leftside_whiskers
+rightside_whiskers

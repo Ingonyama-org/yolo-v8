@@ -13,7 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5/runs/train/exp9/weights/best.pt', force_reload=True)
 
 
-def auto_annotation(DATA_DIR,IMG_DIR, IMG_WIDTH, IMG_HEIGHT):
+def auto_annotation(DATA_DIR,IMG_DIR, IMG_SIZE):
     if not os.path.exists(os.path.join(os.path.join(DATA_DIR, 'labels'))):
         os.makedirs(os.path.join(DATA_DIR, 'labels'))
 
@@ -68,7 +68,7 @@ def auto_annotation(DATA_DIR,IMG_DIR, IMG_WIDTH, IMG_HEIGHT):
                 'shapes': shapes, 
                 "imagePath": f"..\\images\\{image}",
                 "imageData":f"{base64.b64encode(labelme.LabelFile.load_image_file(img_path)).decode('utf-8')}",
-                "imageHeight": IMG_HEIGHT,
-                "imageWidth": IMG_WIDTH
+                "imageHeight": IMG_SIZE,
+                "imageWidth": IMG_SIZE
                 })) 
     print(f"\n---------COMPLETED ANNOTATING--------\n")  
